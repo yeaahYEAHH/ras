@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Document</title>
+</head>
+<body>
+<style>
+	
+
+
+
+</style>
+</head>
+
+<body>
+	<div class="timetable timetable--group">
+		<div class="accordion">
+			<h1 class="timetable__dayname">Вторник (02.05.2023)</h1>
+			<span class="timetable__arrow" id="arrow"> </span>
+		</div>
+		<div class="panel">
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">1 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">08.00-08.45</span>
+						<span class="period__disciple">Планирование карьеры</span>
+						<span class="period__teacher">Степанов Вадим Александрович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
+					</div>
+					<div class="period">
+						<span class="period__time">09.05-09.50</span>
+						<span class="period__disciple">Планирование карьеры</span>
+						<span class="period__teacher">Степанов Вадим Александрович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А226 (К) Технического черчения</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+	<script>
+		let arrow = document.querySelector("#arrow");
+		document.querySelectorAll('.accordion').forEach((item)=> {
+			item.addEventListener("click", function () {
+				let panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+					
+				}
+				arrow.classList.toggle("active");
+			})
+		})
+	</script>
+
+
+	<!-- <div id="loude">
+		<pre> </pre>
+		<div class="timetable timetable--group">
+			<h4 class="timetable__dayname">Понедельник (01.05.2023)</h4>
+		</div>
+
+		<div class="timetable timetable--group">
+			<h4 class="timetable__dayname">Среда (03.05.2023)</h4>
+			
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">2 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">10.00-10.45</span>
+						<span class="period__disciple">Физическая культура</span>
+						<span class="period__teacher">Грушина Юлия Владимировна</span>
+						<span class="period__lecturehall">Физкультурный корпус / Б119_Спортивный зал 2</span>
+					</div>
+					<div class="period">
+						<span class="period__time">11.05-11.50</span>
+						<span class="period__disciple">Физическая культура</span>
+						<span class="period__teacher">Грушина Юлия Владимировна</span>
+						<span class="period__lecturehall">Физкультурный корпус / Б119_Спортивный зал 2</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">3 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">12.15-13.00</span>
+						<span class="period__disciple">МДК.01.02 Поддержка и тестирование программных модулей</span>
+						<span class="period__teacher">Степанов Вадим Александрович</span>
+						<span class="period__lecturehall">Учебно-производственный корпус / В201 (М) Веб-дизайн и
+							разработка</span>
+					</div>
+					<div class="period">
+						<span class="period__time">13.10-13.55</span>
+						<span class="period__disciple">МДК.01.02 Поддержка и тестирование программных модулей</span>
+						<span class="period__teacher">Степанов Вадим Александрович</span>
+						<span class="period__lecturehall">Учебно-производственный корпус / В201 (М) Веб-дизайн и
+							разработка</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">4 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">14.15-15.00</span>
+						<span class="period__disciple">Безопасность жизнедеятельности</span>
+						<span class="period__teacher">Вахрамеев Вахтанг Николаевич</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А420 (К) Безопасность
+							жизнедеятельности и охраны труда</span>
+					</div>
+					<div class="period">
+						<span class="period__time">15.10-15.55</span>
+						<span class="period__disciple">Безопасность жизнедеятельности</span>
+						<span class="period__teacher">Вахрамеев Вахтанг Николаевич</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А420 (К) Безопасность
+							жизнедеятельности и охраны труда</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">5 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">16.05-16.50</span>
+						<span class="period__disciple">МДК.12.01 Разработчик веб и мультимедийных приложений</span>
+						<span class="period__teacher">Козырева Вера Варисовна</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">17.00-17.45</span>
+						<span class="period__disciple">МДК.12.01 Разработчик веб и мультимедийных приложений</span>
+						<span class="period__teacher">Козырева Вера Варисовна</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">6 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">17.55-18.40</span>
+						<span class="period__disciple">МДК.12.02 14995 Наладчик технологического оборудования</span>
+						<span class="period__teacher">Козырева Вера Варисовна</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">18.50-19.35</span>
+						<span class="period__disciple">МДК.12.02 14995 Наладчик технологического оборудования</span>
+						<span class="period__teacher">Козырева Вера Варисовна</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="timetable timetable--group">
+			<h4 class="timetable__dayname">Четверг (04.05.2023)</h4>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">1 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">08.00-08.45</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">09.05-09.50</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">2 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">10.00-10.45</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">11.05-11.50</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">3 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">12.15-13.00</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">13.10-13.55</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="timetable timetable--group">
+			<h4 class="timetable__dayname">Пятница (05.05.2023)</h4>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">1 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">08.00-08.45</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">09.05-09.50</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">2 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">10.00-10.45</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">11.05-11.50</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="timetable__period">
+				<li class="timetable__item--period-num">3 пара</li>
+				<li class="timetable__item--periods">
+					<div class="period">
+						<span class="period__time">12.15-13.00</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+					<div class="period">
+						<span class="period__time">13.10-13.55</span>
+						<span class="period__disciple">УП.12. Учебная практика</span>
+						<span class="period__teacher">Сафаргалин Загир Уралович</span>
+						<span class="period__lecturehall">Учебно-административный корпус / А425 (К) Информатики и информационных
+							технологий</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="timetable timetable--group">
+			<h4 class="timetable__dayname">Суббота (06.05.2023)</h4>
+		</div>
+		<div class="timetable timetable--group">
+			<h4 class="timetable__dayname">Воскресенье (07.05.2023)</h4>
+		</div>
+	</div> -->
+</body>
+</html>

@@ -1,0 +1,166 @@
+.timetable__header .timetable__item--title,
+.timetable__header .timetable__item--row,
+.timetable__item--title,
+.timetable__item--row,
+.timetable__item--period-num,
+.timetable__item--periods {
+	padding: 12px 18px;
+	line-height: 1.33em;
+	letter-spacing: 1.2px;
+}
+
+.timetable {
+	max-width: 1170px;
+	width: 100%;
+	margin: 50px auto;
+}
+
+
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+
+.timetable__header,
+.timetable__row,
+.timetable__dayname,
+.timetable__period,
+.timetable__arrow {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+@media (max-width: 1080px){
+	.timetable__period{
+		flex-wrap: wrap;
+	}
+}
+
+@media (max-width: 900px) {
+	.period {
+		flex-wrap: wrap;
+	}
+	.period > *{
+		flex: 0 1 100%;
+		text-align: center;
+		background-color: #d8f4e6;
+		margin: 10px;
+		padding: 10px;
+	}
+}
+
+.accordion{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #365edc;
+	border: 1px solid #234AC7;
+	transition: .3s all;
+	border-radius: 10px;
+}
+
+.accordion:hover{
+	background-color: #234AC7;
+	padding: 13px 30px;
+}
+
+.timetable__dayname{
+	font-size: 1rem;
+	color: #ffffff;
+}
+
+
+/* @media screen and (max-width: 780px) {
+
+	.timetable__header,
+	.timetable__row,
+	.timetable__dayname,
+	.timetable__period {
+		flex-wrap: wrap;
+	} 
+}*/
+
+
+.timetable__arrow{
+	display: block;
+	width: 10px;
+	height: 10px;
+	transform: rotate(130deg);
+	border: 1px solid white;
+	border-bottom: none;
+	border-left: none;
+	transition: .3s ease-in-out;	
+}
+
+.active {
+	transform: rotate(318deg);
+}
+
+.period__time,
+.period__disciple,
+.period__teacher,
+.period__lecturehall {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.timetable--group {
+	background-color: #ffffff;
+}
+
+.timetable__item--period-num {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #365edc;
+	font-weight: bold;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.1rem;
+	flex: 3 1 10%;
+}
+
+.timetable__item--periods {
+	width: 100%;
+	padding: 0 20px;
+}
+
+.period{
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.period:not(:last-child) {
+	border-bottom: 1px solid #365edc;
+	
+}
+
+.period > *{
+	flex: 0 1 100%;
+}
+
+.period > *:not(:nth-child(even)){
+	text-align: center;
+}
+
+.period__disciple{
+	font-weight: bold;
+}
+
+.timetable__period{
+	padding: 10px;
+	border-bottom: 3px solid #365edc;
+	margin: 0;
+}
+
+
+
